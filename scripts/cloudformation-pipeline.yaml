@@ -28,15 +28,14 @@ Resources:
           Actions:
             - Name: SourceAction
               ActionTypeId:
-                Category: Source
+                Category: Build
                 Owner: AWS
                 Version: 1
                 Provider: CodeCommit
               OutputArtifacts:
                 - Name: Source
               Configuration:
-                BranchName: !Ref RepositoryBranch
-                RepositoryName: !Ref RepositoryName
+                ProjectName: !Ref CodeBuildSource
         - Name: Build
           Actions:
             - Name: BuildAction
@@ -80,6 +79,7 @@ Resources:
                   - 'codecommit:GetCommit'
                   - 'codecommit:GetUploadArchiveStatus'
                   - 'codecommit:UploadArchive'
+                  - 'codecommit:GitPush'
                 Resource:
                   - !Sub arn:aws:codecommit:*:*:${RepositoryName}
                   - !GetAtt PipelineBucket.Arn
@@ -146,7 +146,35 @@ Resources:
           - Name: REPO_MIRROR_URL
             Value: !Ref RepositoryMirrorUrl
       Source:
+        Type: CODECOMMIT
+        Location: !Ref RepositoryCloneUrl
+        BuildSpec: 'buildspec.yml'
+        SourceVersion: 'master'
+  CodeBuildSource:
+    Type: 'AWS::CodeBuild::Project'
+    Properties:
+      Name: !Sub '${AWS::StackName}-${RepositoryBranch}-CodeBuildSource'
+      ServiceRole: !GetAtt CodeBuildRole.Arn
+      Artifacts:
         Type: CODEPIPELINE
+      Environment:
+        ComputeType: BUILD_GENERAL1_SMALL
+        Type: LINUX_CONTAINER
+        Image: 'aws/codebuild/nodejs:8.11.0'
+        EnvironmentVariables:
+          - Name: REPO_URL
+            Value: !Ref RepositoryCloneUrl
+          - Name: REPO_BRANCH
+            Value: !Ref RepositoryBranch
+      Source:
+        Type: CODECOMMIT
+        Location: !Ref RepositoryCloneUrl
+        BuildSpec: 'buildspec_update.yml'
+        SourceVersion: 'master'
+      Description: !Join
+        - ''
+        - - 'CodeBuild Update Project for '
+          - !Ref 'AWS::StackName'
   PipelineBucket:
     Type: 'AWS::S3::Bucket'
     Properties: {}
