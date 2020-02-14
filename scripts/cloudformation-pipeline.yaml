@@ -137,7 +137,7 @@ Resources:
       Environment:
         ComputeType: BUILD_GENERAL1_SMALL
         Type: LINUX_CONTAINER
-        Image: 'aws/codebuild/eb-python-2.7-amazonlinux-64:2.3.2'
+        Image: 'aws/codebuild/nodejs:8.11.0'
         EnvironmentVariables:
           - Name: REPO_URL
             Value: !Ref RepositoryCloneUrl
