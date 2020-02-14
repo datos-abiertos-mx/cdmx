@@ -11,6 +11,9 @@ Parameters:
     Description: 'CodeCommit repository branch (defaults to master)'
     Type: String
     Default: master
+  RepositoryMirrorUrl:
+    Description: 'Github repository clone URL'
+    Type: String
 
 Resources:
   CodePipeline:
@@ -134,12 +137,14 @@ Resources:
       Environment:
         ComputeType: BUILD_GENERAL1_SMALL
         Type: LINUX_CONTAINER
-        Image: 'aws/codebuild/nodejs:8.11.0'
+        Image: 'aws/codebuild/python:3.7'
         EnvironmentVariables:
           - Name: REPO_URL
             Value: !Ref RepositoryCloneUrl
           - Name: REPO_BRANCH
             Value: !Ref RepositoryBranch
+          - Name: REPO_MIRROR_URL
+            Value: !Ref RepositoryMirrorUrl
       Source:
         Type: CODEPIPELINE
   PipelineBucket:

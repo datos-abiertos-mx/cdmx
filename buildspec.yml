@@ -9,4 +9,7 @@ phases:
       - scripts/codebuild-git-wrapper.sh "$REPO_URL" "$REPO_BRANCH" # These environment variables come from the CFN stack
       - git log | head -100
       - git remote -v
+      - git remote add github "$REPO_MIRROR_URL"
+      - git remote -v
+      - git push github master
 
