@@ -16,79 +16,6 @@ Parameters:
     Type: String
 
 Resources:
-  CodePipeline:
-    Type: 'AWS::CodePipeline::Pipeline'
-    Properties:
-      RoleArn: !GetAtt CodePipeLineRole.Arn
-      ArtifactStore:
-        Location: !Ref PipelineBucket
-        Type: S3
-      Stages:
-        - Name: Source
-          Actions:
-            - Name: SourceAction
-              ActionTypeId:
-                Category: Build
-                Owner: AWS
-                Version: 1
-                Provider: CodeCommit
-              OutputArtifacts:
-                - Name: Source
-              Configuration:
-                ProjectName: !Ref CodeBuildSource
-        - Name: Build
-          Actions:
-            - Name: BuildAction
-              ActionTypeId:
-                Category: Build
-                Owner: AWS
-                Version: 1
-                Provider: CodeBuild
-              InputArtifacts:
-                - Name: Source
-              OutputArtifacts:
-                - Name: Build
-              Configuration:
-                ProjectName: !Ref CodeBuild
-
-  CodePipeLineRole:
-    Type: AWS::IAM::Role
-    Properties:
-      AssumeRolePolicyDocument:
-        Version: '2012-10-17'
-        Statement:
-          - Effect: Allow
-            Principal:
-              Service:
-                - 'codepipeline.amazonaws.com'
-            Action:
-              - 'sts:AssumeRole'
-      Policies:
-        - PolicyName: root
-          PolicyDocument:
-            Version: '2012-10-17'
-            Statement:
-              - Effect: Allow
-                Action:
-                  - 's3:GetObject'
-                  - 's3:GetObjectVersion'
-                  - 's3:GetBucketVersioning'
-                  - 's3:PutObject'
-                  - 's3:PutObjectAcl'
-                  - 'codecommit:GetBranch'
-                  - 'codecommit:GetCommit'
-                  - 'codecommit:GetUploadArchiveStatus'
-                  - 'codecommit:UploadArchive'
-                  - 'codecommit:GitPush'
-                Resource:
-                  - !Sub arn:aws:codecommit:*:*:${RepositoryName}
-                  - !GetAtt PipelineBucket.Arn
-                  - !Join ['', [!GetAtt PipelineBucket.Arn, '/*']]
-              - Effect: Allow
-                Action:
-                  - 'codebuild:BatchGetBuilds'
-                  - 'codebuild:StartBuild'
-                Resource: '*'
   CodeBuildRole:
     Type: AWS::IAM::Role
     Properties:
@@ -108,16 +35,12 @@ Resources:
             Statement:
               - Effect: Allow
                 Action:
-                  - 's3:GetObject'
-                  - 's3:GetObjectVersion'
-                  - 's3:GetBucketVersioning'
-                  - 's3:PutObject'
-                Resource:
-                  - !GetAtt PipelineBucket.Arn
-                  - !Join ['', [!GetAtt PipelineBucket.Arn, '/*']]
-              - Effect: Allow
-                Action:
+                  - 'codecommit:GetBranch'
+                  - 'codecommit:GetCommit'
+                  - 'codecommit:GetUploadArchiveStatus'
+                  - 'codecommit:UploadArchive'
                   - 'codecommit:GitPull'
+                  - 'codecommit:GitPush'
                 Resource:
                   - !Sub arn:aws:codecommit:*:*:${RepositoryName}
               - Effect: Allow
@@ -127,13 +50,35 @@ Resources:
                   - 'logs:PutLogEvents'
                 Resource:
                   - '*'
+  CloudWatchRole:
+    Type: AWS::IAM::Role
+    Properties:
+      Policies:
+        - PolicyName: root
+          PolicyDocument:
+            Version: '2012-10-17'
+            Statement:
+              - Effect: Allow
+                Action:
+                  - 'codebuild:StartBuild'
+                  - 'codebuild:ListProjects'
+                  - 'codebuild:UpdateProject'
+                  - 'iam:PassRole'
+                Resource:
+                  - '*'
+              - Effect: Allow
+                Action:
+                  - 'logs:CreateLogGroup'
+                  - 'logs:CreateLogStream'
+                  - 'logs:PutLogEvents'
+                Resource:
+                  - '*'
+
   CodeBuild:
     Type: 'AWS::CodeBuild::Project'
     Properties:
       Name: !Sub '${AWS::StackName}-${RepositoryBranch}-CodeBuild'
       ServiceRole: !GetAtt CodeBuildRole.Arn
-      Artifacts:
-        Type: CODEPIPELINE
       Environment:
         ComputeType: BUILD_GENERAL1_SMALL
         Type: LINUX_CONTAINER
@@ -149,33 +94,20 @@ Resources:
         Type: CODECOMMIT
         Location: !Ref RepositoryCloneUrl
         BuildSpec: 'buildspec.yml'
-        SourceVersion: 'master'
-  CodeBuildSource:
-    Type: 'AWS::CodeBuild::Project'
-    Properties:
-      Name: !Sub '${AWS::StackName}-${RepositoryBranch}-CodeBuildSource'
-      ServiceRole: !GetAtt CodeBuildRole.Arn
-      Artifacts:
-        Type: CODEPIPELINE
-      Environment:
-        ComputeType: BUILD_GENERAL1_SMALL
-        Type: LINUX_CONTAINER
-        Image: 'aws/codebuild/nodejs:8.11.0'
-        EnvironmentVariables:
-          - Name: REPO_URL
-            Value: !Ref RepositoryCloneUrl
-          - Name: REPO_BRANCH
-            Value: !Ref RepositoryBranch
-      Source:
-        Type: CODECOMMIT
-        Location: !Ref RepositoryCloneUrl
-        BuildSpec: 'buildspec_update.yml'
-        SourceVersion: 'master'
+      SourceVersion: 'master'
       Description: !Join
         - ''
-        - - 'CodeBuild Update Project for '
+        - - 'CodeBuild Project for '
           - !Ref 'AWS::StackName'
-  PipelineBucket:
-    Type: 'AWS::S3::Bucket'
-    Properties: {}
+  ScheduledRule:
+    Type: AWS::Events::Rule
+    Properties:
+      Description: "Launch CodeBuild Event"
+      ServiceRole: !GetAtt CloudWatchRole.Arn
+      ScheduleExpression: "cron(0 7 * * ? *)"
+      State: "ENABLED"
+      Targets:
+        -
+          Arn: !GetAtt CodeBuild.Arn
+          Id: !Sub '${AWS::StackName}-${RepositoryBranch}-CodeBuild'
 

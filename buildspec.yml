@@ -11,5 +11,5 @@ phases:
       - git remote -v
       - git remote add github "$REPO_MIRROR_URL"
       - git remote -v
+      - python --version
       - git push github master
-
