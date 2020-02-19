@@ -16,6 +16,7 @@ phases:
       - python --version
       - python download_files.py
       - git add data/*
+      - git add log/*
       - git commit -am "Update run for date $(date)"
       - git push origin master
       - git push --force github master
