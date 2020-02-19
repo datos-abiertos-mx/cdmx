@@ -12,4 +12,8 @@ phases:
       - git remote add github "$REPO_MIRROR_URL"
       - git remote -v
       - python --version
-      - git push github master
+      - python download_files.py
+      - git add data/*
+      - git commit -am "Update run for date $(date)"
+      - git push origin master
+      - git push --force github master

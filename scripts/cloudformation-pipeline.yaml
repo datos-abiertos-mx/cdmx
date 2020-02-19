@@ -53,6 +53,15 @@ Resources:
   CloudWatchRole:
     Type: AWS::IAM::Role
     Properties:
+      AssumeRolePolicyDocument:
+        Version: '2012-10-17'
+        Statement:
+          - Effect: Allow
+            Principal:
+              Service:
+                - 'codebuild.amazonaws.com'
+            Action:
+              - 'sts:AssumeRole'
       Policies:
         - PolicyName: root
           PolicyDocument:
@@ -73,7 +82,6 @@ Resources:
                   - 'logs:PutLogEvents'
                 Resource:
                   - '*'
-
   CodeBuild:
     Type: 'AWS::CodeBuild::Project'
     Properties:
@@ -95,6 +103,8 @@ Resources:
         Location: !Ref RepositoryCloneUrl
         BuildSpec: 'buildspec.yml'
       SourceVersion: 'master'
+      Artifacts:
+        Type: NO_ARTIFACTS
       Description: !Join
         - ''
         - - 'CodeBuild Project for '
@@ -103,11 +113,11 @@ Resources:
     Type: AWS::Events::Rule
     Properties:
       Description: "Launch CodeBuild Event"
-      ServiceRole: !GetAtt CloudWatchRole.Arn
       ScheduleExpression: "cron(0 7 * * ? *)"
       State: "ENABLED"
       Targets:
         -
           Arn: !GetAtt CodeBuild.Arn
           Id: !Sub '${AWS::StackName}-${RepositoryBranch}-CodeBuild'
+          RoleArn: !GetAtt CloudWatchRole.Arn
 

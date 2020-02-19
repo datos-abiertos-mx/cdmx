@@ -1,7 +1,7 @@
 sites:
     adip:
         name: ADIP
-        url: https://datos.cdmx.gob.mx/explore/dataset/{dataset}/download/?format={format}&timezone={timezone}&lang={es}&use_labels_for_header=true&csv_separator=%2C
+        url: https://datos.cdmx.gob.mx/explore/dataset/{dataset}/download/?format={format}&timezone={timezone}&lang={lang}&use_labels_for_header=true&csv_separator=%2C
         params:
             format: csv
             timezone: America/Mexico_City
