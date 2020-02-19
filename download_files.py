@@ -25,17 +25,21 @@ def download():
                 url = site['url'].format(**site['params'])
                 print(url)
                 logger.info(url)
-                filedata = urllib2.urlopen(url)
-                datatowrite = filedata.read()
-                path = 'data/{site}/'.format(site=site_name)
-                if not os.path.exists(path):
-                    os.makedirs(path)
-                filename = '{path}/{dataset}.{format}'.format(path=path, dataset=dataset,
-                                                              format=site['params']['format'])
-                with open(filename, 'wb') as f:
-                    f.write(datatowrite)
-                print(filename)
-                logger.info(filename)
+                try:
+                    filedata = urllib2.urlopen(url)
+                    datatowrite = filedata.read()
+                    path = 'data/{site}/'.format(site=site_name)
+                    if not os.path.exists(path):
+                        os.makedirs(path)
+                    filename = '{path}/{dataset}.{format}'.format(path=path, dataset=dataset,
+                                                                  format=site['params']['format'])
+                    with open(filename, 'wb') as f:
+                        f.write(datatowrite)
+                    print(filename)
+                    logger.info(filename)
+                except Exception as ex:
+                    print(ex)
+                    logging.error("\n{}\nERROR".format('-' * 30), exc_info=ex)
 
 
 if __name__ == '__main__':
