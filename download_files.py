@@ -1,6 +1,7 @@
 import datetime
 import logging
 import os
+import subprocess
 import urllib2
 import yaml
 
@@ -28,15 +29,20 @@ def download():
                 try:
                     filedata = urllib2.urlopen(url)
                     datatowrite = filedata.read()
-                    path = 'data/{site}/'.format(site=site_name)
+                    path = 'data/{site}/{dataset}/'.format(site=site_name, dataset=dataset)
                     if not os.path.exists(path):
                         os.makedirs(path)
-                    filename = '{path}/{dataset}.{format}'.format(path=path, dataset=dataset,
-                                                                  format=site['params']['format'])
+                    filename = '{path}{dataset}.{format}'.format(path=path, dataset=dataset,
+                                                                 format=site['params']['format'])
                     with open(filename, 'wb') as f:
                         f.write(datatowrite)
                     print(filename)
                     logger.info(filename)
+                    cmd = 'split -l 70000 {filename} {dataset}_'.format(filename=filename, dataset=dataset)
+                    subprocess.call(cmd, shell=True)
+                    cmd = 'mv {dataset}_* {path}.'.format(path=path, dataset=dataset)
+                    subprocess.call(cmd, shell=True)
+                    os.remove(filename)
                 except Exception as ex:
                     print(ex)
                     logging.error("\n{}\nERROR".format('-' * 30), exc_info=ex)
