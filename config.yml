@@ -21,3 +21,11 @@ sites:
             - "vialidades-de-la-ciudad-de-mexico"
             - "ciclovias"
             - "estaciones-de-ecobici"
+    cre:
+        name: gasolineras
+        url: https://publicacionexterna.azurewebsites.net/publicaciones/{dataset}
+        params:
+            format: xml
+        datasets:
+            - "places"
+            - "prices"
