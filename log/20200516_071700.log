@@ -1,0 +1,50 @@
+2020-05-16 07:17:00,275 INFO https://datos.cdmx.gob.mx/explore/dataset/fotocivicas/download/?format=csv&timezone=America/Mexico_City&lang=es&use_labels_for_header=true&csv_separator=%2C
+2020-05-16 07:17:01,061 INFO data/adip/fotocivicas/fotocivicas.csv
+2020-05-16 07:17:01,069 INFO https://datos.cdmx.gob.mx/explore/dataset/diagnostico-sobre-la-ciudad-en-el-mundo/download/?format=csv&timezone=America/Mexico_City&lang=es&use_labels_for_header=true&csv_separator=%2C
+2020-05-16 07:17:01,623 INFO data/adip/diagnostico-sobre-la-ciudad-en-el-mundo/diagnostico-sobre-la-ciudad-en-el-mundo.csv
+2020-05-16 07:17:01,627 INFO https://datos.cdmx.gob.mx/explore/dataset/incidentes-viales-c5/download/?format=csv&timezone=America/Mexico_City&lang=es&use_labels_for_header=true&csv_separator=%2C
+2020-05-16 07:28:52,897 INFO data/adip/incidentes-viales-c5/incidentes-viales-c5.csv
+2020-05-16 07:28:57,339 INFO https://datos.cdmx.gob.mx/explore/dataset/mapa_ingresos_parquimetros/download/?format=csv&timezone=America/Mexico_City&lang=es&use_labels_for_header=true&csv_separator=%2C
+2020-05-16 07:28:58,166 INFO data/adip/mapa_ingresos_parquimetros/mapa_ingresos_parquimetros.csv
+2020-05-16 07:28:58,170 INFO https://datos.cdmx.gob.mx/explore/dataset/contador-ciclistas/download/?format=csv&timezone=America/Mexico_City&lang=es&use_labels_for_header=true&csv_separator=%2C
+2020-05-16 07:28:59,437 INFO data/adip/contador-ciclistas/contador-ciclistas.csv
+2020-05-16 07:28:59,441 INFO https://datos.cdmx.gob.mx/explore/dataset/carpetas-de-investigacion-pgj-de-la-ciudad-de-mexico/download/?format=csv&timezone=America/Mexico_City&lang=es&use_labels_for_header=true&csv_separator=%2C
+2020-05-16 07:38:00,106 INFO data/adip/carpetas-de-investigacion-pgj-de-la-ciudad-de-mexico/carpetas-de-investigacion-pgj-de-la-ciudad-de-mexico.csv
+2020-05-16 07:38:01,635 INFO https://datos.cdmx.gob.mx/explore/dataset/victimas-en-carpetas-de-investigacion-pgj/download/?format=csv&timezone=America/Mexico_City&lang=es&use_labels_for_header=true&csv_separator=%2C
+2020-05-16 07:41:18,374 INFO data/adip/victimas-en-carpetas-de-investigacion-pgj/victimas-en-carpetas-de-investigacion-pgj.csv
+2020-05-16 07:41:18,687 INFO https://datos.cdmx.gob.mx/explore/dataset/prueba-parquimetros/download/?format=csv&timezone=America/Mexico_City&lang=es&use_labels_for_header=true&csv_separator=%2C
+2020-05-16 07:41:19,931 INFO data/adip/prueba-parquimetros/prueba-parquimetros.csv
+2020-05-16 07:41:19,935 INFO https://datos.cdmx.gob.mx/explore/dataset/hechos-de-transito-reportados-por-ssc-base-comparativa/download/?format=csv&timezone=America/Mexico_City&lang=es&use_labels_for_header=true&csv_separator=%2C
+2020-05-16 07:41:43,150 INFO data/adip/hechos-de-transito-reportados-por-ssc-base-comparativa/hechos-de-transito-reportados-por-ssc-base-comparativa.csv
+2020-05-16 07:41:43,249 INFO https://datos.cdmx.gob.mx/explore/dataset/hechos-de-transito-registrados-por-la-ssc-serie-para-comparaciones-interanuales-/download/?format=csv&timezone=America/Mexico_City&lang=es&use_labels_for_header=true&csv_separator=%2C
+2020-05-16 07:41:43,538 ERROR 
+------------------------------
+ERROR
+Traceback (most recent call last):
+  File "download_files.py", line 30, in download
+    filedata = urllib2.urlopen(url)
+  File "/usr/lib/python2.7/urllib2.py", line 127, in urlopen
+    return _opener.open(url, data, timeout)
+  File "/usr/lib/python2.7/urllib2.py", line 410, in open
+    response = meth(req, response)
+  File "/usr/lib/python2.7/urllib2.py", line 523, in http_response
+    'http', request, response, code, msg, hdrs)
+  File "/usr/lib/python2.7/urllib2.py", line 448, in error
+    return self._call_chain(*args)
+  File "/usr/lib/python2.7/urllib2.py", line 382, in _call_chain
+    result = func(*args)
+  File "/usr/lib/python2.7/urllib2.py", line 531, in http_error_default
+    raise HTTPError(req.get_full_url(), code, msg, hdrs, fp)
+HTTPError: HTTP Error 404: Not Found
+2020-05-16 07:41:43,540 INFO https://datos.cdmx.gob.mx/explore/dataset/gtfs-general-transit-feed-specifications-actualizado-de-la-ciudad-de-mexico/download/?format=csv&timezone=America/Mexico_City&lang=es&use_labels_for_header=true&csv_separator=%2C
+2020-05-16 07:41:44,603 INFO data/adip/gtfs-general-transit-feed-specifications-actualizado-de-la-ciudad-de-mexico/gtfs-general-transit-feed-specifications-actualizado-de-la-ciudad-de-mexico.csv
+2020-05-16 07:41:44,607 INFO https://datos.cdmx.gob.mx/explore/dataset/vialidades-de-la-ciudad-de-mexico/download/?format=csv&timezone=America/Mexico_City&lang=es&use_labels_for_header=true&csv_separator=%2C
+2020-05-16 07:41:45,530 INFO data/adip/vialidades-de-la-ciudad-de-mexico/vialidades-de-la-ciudad-de-mexico.csv
+2020-05-16 07:41:45,534 INFO https://datos.cdmx.gob.mx/explore/dataset/ciclovias/download/?format=csv&timezone=America/Mexico_City&lang=es&use_labels_for_header=true&csv_separator=%2C
+2020-05-16 07:41:46,234 INFO data/adip/ciclovias/ciclovias.csv
+2020-05-16 07:41:46,238 INFO https://datos.cdmx.gob.mx/explore/dataset/estaciones-de-ecobici/download/?format=csv&timezone=America/Mexico_City&lang=es&use_labels_for_header=true&csv_separator=%2C
+2020-05-16 07:41:46,891 INFO data/adip/estaciones-de-ecobici/estaciones-de-ecobici.csv
+2020-05-16 07:41:46,895 INFO https://publicacionexterna.azurewebsites.net/publicaciones/places
+2020-05-16 07:41:47,765 INFO data/cre/places/places.xml
+2020-05-16 07:41:47,775 INFO https://publicacionexterna.azurewebsites.net/publicaciones/prices
+2020-05-16 07:41:48,815 INFO data/cre/prices/prices.xml
