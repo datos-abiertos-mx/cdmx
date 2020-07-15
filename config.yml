@@ -30,3 +30,11 @@ sites:
         datasets:
             - "places"
             - "prices"
+    gobmx_salud:
+        name: gobmx_salud
+        url: http://{ip}/gobmx/salud/datos_abiertos/{dataset}.{format}
+        params:
+            ip: "187.191.75.115"
+            format: zip 
+        dataset:
+            - "datos_abiertos_covid19"
