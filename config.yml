@@ -36,5 +36,5 @@ sites:
         params:
             ip: "187.191.75.115"
             format: zip 
-        dataset:
+        datasets:
             - "datos_abiertos_covid19"
