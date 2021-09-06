@@ -1,3 +1,23 @@
+  <place place_id="12935">
+    <gas_price type="regular">20.45</gas_price>
+  </place>
+  <place place_id="12935">
+    <gas_price type="premium">24.2</gas_price>
+    <gas_price type="diesel">22.2</gas_price>
+  </place>
+  <place place_id="12934">
+    <gas_price type="regular">12.62</gas_price>
+    <gas_price type="diesel">17.14</gas_price>
+  </place>
+  <place place_id="12932">
+    <gas_price type="regular">21.98</gas_price>
+    <gas_price type="premium">22.99</gas_price>
+    <gas_price type="diesel">23.2</gas_price>
+  </place>
+  <place place_id="12928">
+    <gas_price type="premium">21.89</gas_price>
+  </place>
+  <place place_id="12928">
     <gas_price type="diesel">22.29</gas_price>
   </place>
   <place place_id="12928">
@@ -545,8 +565,8 @@
     <gas_price type="diesel">20.72</gas_price>
   </place>
   <place place_id="12572">
-    <gas_price type="regular">19.72</gas_price>
-    <gas_price type="premium">21.53</gas_price>
+    <gas_price type="regular">19.69</gas_price>
+    <gas_price type="premium">21.51</gas_price>
   </place>
   <place place_id="12569">
     <gas_price type="regular">19.75</gas_price>
@@ -667,11 +687,11 @@
   </place>
   <place place_id="12544">
     <gas_price type="regular">19.95</gas_price>
-    <gas_price type="premium">22.15</gas_price>
+    <gas_price type="premium">21.9</gas_price>
   </place>
   <place place_id="12542">
     <gas_price type="regular">19.75</gas_price>
-    <gas_price type="premium">21.95</gas_price>
+    <gas_price type="premium">21.7</gas_price>
   </place>
   <place place_id="12541">
     <gas_price type="regular">20.74</gas_price>
@@ -732,7 +752,7 @@
   </place>
   <place place_id="12362">
     <gas_price type="regular">20.35</gas_price>
-    <gas_price type="premium">21.64</gas_price>
+    <gas_price type="premium">20.34</gas_price>
     <gas_price type="diesel">22.2</gas_price>
   </place>
   <place place_id="12317">
@@ -976,7 +996,7 @@
   <place place_id="3069">
     <gas_price type="regular">21.95</gas_price>
     <gas_price type="premium">23.7</gas_price>
-    <gas_price type="diesel">23.15</gas_price>
+    <gas_price type="diesel">23.05</gas_price>
   </place>
   <place place_id="2849">
     <gas_price type="premium">21.65</gas_price>
@@ -1530,7 +1550,7 @@
     <gas_price type="premium">21.39</gas_price>
   </place>
   <place place_id="11340">
-    <gas_price type="regular">20.48</gas_price>
+    <gas_price type="regular">20.58</gas_price>
   </place>
   <place place_id="11340">
     <gas_price type="diesel">21.89</gas_price>
@@ -1621,7 +1641,7 @@
   <place place_id="11648">
     <gas_price type="regular">21.95</gas_price>
     <gas_price type="premium">23.7</gas_price>
-    <gas_price type="diesel">23.15</gas_price>
+    <gas_price type="diesel">23.05</gas_price>
   </place>
   <place place_id="11647">
     <gas_price type="regular">19.99</gas_price>
@@ -1707,13 +1727,13 @@
     <gas_price type="regular">18.65</gas_price>
   </place>
   <place place_id="11632">
-    <gas_price type="regular">20.85</gas_price>
+    <gas_price type="premium">21.99</gas_price>
   </place>
   <place place_id="11632">
-    <gas_price type="premium">22.6</gas_price>
+    <gas_price type="regular">20.85</gas_price>
   </place>
   <place place_id="11631">
-    <gas_price type="premium">22.8</gas_price>
+    <gas_price type="premium">22.7</gas_price>
   </place>
   <place place_id="11631">
     <gas_price type="regular">20.99</gas_price>
@@ -1731,13 +1751,11 @@
     <gas_price type="premium">23.69</gas_price>
   </place>
   <place place_id="11630">
-    <gas_price type="regular">20.9</gas_price>
+    <gas_price type="regular">21.1</gas_price>
+    <gas_price type="premium">22.7</gas_price>
   </place>
   <place place_id="11630">
     <gas_price type="diesel">22.5</gas_price>
-  </place>
-  <place place_id="11630">
-    <gas_price type="premium">22.8</gas_price>
   </place>
   <place place_id="11629">
     <gas_price type="regular">20.12</gas_price>
@@ -2264,8 +2282,8 @@
     <gas_price type="diesel">19.6</gas_price>
   </place>
   <place place_id="11588">
-    <gas_price type="regular">20.68</gas_price>
-    <gas_price type="diesel">22.44</gas_price>
+    <gas_price type="regular">20.67</gas_price>
+    <gas_price type="diesel">22.34</gas_price>
   </place>
   <place place_id="11588">
     <gas_price type="premium">22.93</gas_price>
@@ -2737,7 +2755,9 @@
     <gas_price type="regular">19.99</gas_price>
   </place>
   <place place_id="11488">
-    <gas_price type="regular">20.8</gas_price>
+    <gas_price type="regular">20.9</gas_price>
+  </place>
+  <place place_id="11488">
     <gas_price type="premium">23.45</gas_price>
   </place>
   <place place_id="11488">
@@ -2881,7 +2901,7 @@
   </place>
   <place place_id="11463">
     <gas_price type="regular">19.95</gas_price>
-    <gas_price type="premium">22.05</gas_price>
+    <gas_price type="premium">21.8</gas_price>
     <gas_price type="diesel">20.95</gas_price>
   </place>
   <place place_id="11462">
@@ -2904,10 +2924,10 @@
     <gas_price type="diesel">22.33</gas_price>
   </place>
   <place place_id="11460">
-    <gas_price type="regular">19.69</gas_price>
+    <gas_price type="premium">21.7</gas_price>
   </place>
   <place place_id="11460">
-    <gas_price type="premium">21.95</gas_price>
+    <gas_price type="regular">19.69</gas_price>
   </place>
   <place place_id="11459">
     <gas_price type="regular">20.69</gas_price>
@@ -3198,7 +3218,7 @@
   <place place_id="11415">
     <gas_price type="regular">21.79</gas_price>
     <gas_price type="premium">23.31</gas_price>
-    <gas_price type="diesel">23.35</gas_price>
+    <gas_price type="diesel">23.2</gas_price>
   </place>
   <place place_id="11414">
     <gas_price type="regular">22.56</gas_price>
@@ -3207,7 +3227,7 @@
   <place place_id="11413">
     <gas_price type="regular">22.56</gas_price>
     <gas_price type="premium">23.87</gas_price>
-    <gas_price type="diesel">23.92</gas_price>
+    <gas_price type="diesel">23.77</gas_price>
   </place>
   <place place_id="11412">
     <gas_price type="premium">23.69</gas_price>
