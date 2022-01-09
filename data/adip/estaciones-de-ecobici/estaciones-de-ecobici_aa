@@ -1,14 +1,35 @@
 <!DOCTYPE html>
-<!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<!--[if IE 9]> <html lang="es" class="ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="es"> <!--<![endif]-->
   <head>
     <meta charset="utf-8" />
-      <meta name="generator" content="ckan 2.9.0" />
+      <meta name="generator" content="ckan 2.10.0a" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome - Portal de Datos Abiertos de la CDMX</title>
+      <meta name="author" content="Agencia Digital de Innovación Pública">
+      <meta name="revisit-after" content="2 days">
+      <meta Http-Equiv="Cache-Control" Content="no-cache">
+      <meta Http-Equiv="Pragma" Content="no-cache">
+      <meta Http-Equiv="Expires" Content="0">
+      <meta Http-Equiv="Pragma-directive: no-cache">
+      <meta Http-Equiv="Cache-directive: no-cache">
+      <meta name="theme-color" content="#00af55">
+      <meta name="description" content='Agencia Digital de Innovación Pública “Portal de Datos Abiertos de la CDMX” Disponible en https://datos.cdmx.gob.mx/'>
+      <meta property="og:type" content="website">
+      <meta property="og:image" content="https://datos.cdmx.gob.mx/base/images/image_portal.jpg">
+      <meta property="og:image:type" content="image/jpg">
+      <meta property="og:image:width" content="600">
+      <meta property="og:image:height" content="317">
+      <meta property="og:title" content="Portal de Datos Abiertos de la CDMX" />
+      <meta property="og:description" content="El portal de Datos Abiertos de la CDMX te permite acceder, explorar, analizar, vizualizar y descargar bases de datos de organismos públicos de la CDMX">
+      <meta property="og:url" content="https://datos.cdmx.gob.mx/" />
+    <title>Bienvenida - Portal de Datos Abiertos de la CDMX</title>
 
     
-    <link rel="shortcut icon" href="/base/images/ckan.ico" />
+    <link rel="shortcut icon" href="/base/images/favicon-32x32.png" />
+      <link rel="preconnect" href="https://fonts.gstatic.com">
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400&display=swap" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous">
     
       
       
@@ -22,74 +43,48 @@
     
 
     
-    <link href="/webassets/base/98bf0889_green.css" rel="stylesheet"/>
+    <link href="/webassets/base/19eb40af_green.css" rel="stylesheet"/>
     
+    <link rel="stylesheet" href="/base/css/base.css" />
   </head>
 
   
-  <body data-site-root="https://datos-ckan.cdmx.gob.mx/" data-locale-root="https://datos-ckan.cdmx.gob.mx/" >
+  <body data-site-root="https://datos.cdmx.gob.mx/" data-locale-root="https://datos.cdmx.gob.mx/" >
 
     
-    <div class="hide"><a href="#content">Skip to content</a></div>
+    <div class="sr-only sr-only-focusable"><a href="#content">Ir al contenido</a></div>
   
 
   
      
-<div class="account-masthead">
+
+
+<nav class="navbar navbar-light bg-light">
   <div class="container">
-     
-    <nav class="account not-authed" aria-label="Account">
-      <ul class="list-unstyled">
-        
-        <li><a href="/user/login">Log in</a></li>
-        
-        <li><a class="sub" href="/user/register">Register</a></li>
-         
-      </ul>
-    </nav>
-     
+    <a class="navbar-brand" href="/">
+      <img src="/uploads/admin/2020-12-29-022442.796953logo.svg" alt="Portal de Datos Abiertos de la CDMX" title="Portal de Datos Abiertos de la CDMX" height="50">
+    </a>
   </div>
-</div>
-
-<header class="navbar navbar-static-top masthead">
-    
-  <div class="container">
-    <div class="navbar-right">
-      <button data-target="#main-navigation-toggle" data-toggle="collapse" class="navbar-toggle collapsed" type="button">
-        <span class="fa fa-bars"></span>
-      </button>
-    </div>
-    <hgroup class="header-image navbar-left">
-       
-      <a class="logo" href="/"><img src="/uploads/admin/2020-12-29-022442.796953logo.svg" alt="Portal de Datos Abiertos de la CDMX" title="Portal de Datos Abiertos de la CDMX" /></a>
-       
-    </hgroup>
-
-    <div class="collapse navbar-collapse" id="main-navigation-toggle">
-      
-      <nav class="section navigation">
-        <ul class="nav nav-pills">
-            
-		<li><a href="/dataset/">Datasets</a></li><li><a href="/organization/">Organizations</a></li><li><a href="/group/">Groups</a></li><li><a href="/about">About</a></li>
-	    
-        </ul>
-      </nav>
-       
-      <form class="section site-search simple-input" action="/dataset/" method="get">
-        <div class="field">
-          <label for="field-sitewide-search">Search Datasets</label>
-          <input id="field-sitewide-search" type="text" class="form-control" name="q" placeholder="Search" aria-label="Search datasets"/>
-          <button class="btn-search" type="submit" aria-label="Submit"><i class="fa fa-search"></i></button>
-        </div>
-      </form>
+</nav>
+<nav id="nav-menu" class="navbar navbar-expand-lg py-0">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"><i class="fas fa-bars text-light pt-1"></i></span>
+  </button>
+  <div class="collapse navbar-collapse w-100 justify-content-center" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <a class="nav-item nav-link mx-2" aria-current="page" href="/">Inicio</a>
+      <a class="nav-item nav-link mx-2" href="/dataset/">Conjuntos de datos</a>
+      <a class="nav-item nav-link mx-2" href="https://paginas.datos.cdmx.gob.mx/plan-apertura" target="_blank">Plan de apertura</a>
+      <a class="nav-item nav-link mx-2" href="https://paginas.datos.cdmx.gob.mx" target="_blank">Plan de acción</a>
       
     </div>
   </div>
-</header>
+</nav>
+
 
   
-  <div class="homepage layout-2">
-    <div class="container">
+  <div class="homepage mt-5 layout-2">
+    <div id="content" class="container">
       
             <div class="flash-messages">
               
@@ -104,688 +99,502 @@
 <div role="main" class="hero">
   <div class="container">
     <div class="row row1">
-      <div class="col-md-6 col1">
+      <div class="col-md-8 col1">
+        
+          
+<!-- Snippet home/snippets/promoted.html start -->
+
+  
+    <h1 class="mt-4"><strong>Bienvenida al Portal de Datos Abiertos de la CDMX</strong></h1>
+    <h5 class="text-green-light py-3">Construyendo una ciudad de ventanas transparentes y puertas abiertas</h5>
+    
+      <p>El portal de Datos Abiertos de la CDMX te permite acceder, explorar, analizar, vizualizar y descargar bases de datos de organismos públicos de la CDMX</p>
+    
+    
+
+    
+  
+<!-- Snippet home/snippets/promoted.html end -->
+
+        
         
           
 <!-- Snippet home/snippets/search.html start -->
 
 
-
-<div class="module module-search module-narrow module-shallow box">
-  <form class="module-content search-form" method="get" action="/dataset/">
-    <h3 class="heading">Search data</h3>
-    <div class="search-input form-group search-giant">
-      <input aria-label="Search datasets" id="field-main-search" type="text" class="form-control" name="q" value="" autocomplete="off" placeholder="E.g. environment" />
-      <button type="submit" aria-labelledby="search-label">
-        <i class="fa fa-search"></i>
-        <span class="sr-only" id="search-label">Search</span>
-      </button>
-    </div>
-  </form>
-  <div class="tags">
-    <h3>Popular tags</h3>
-    
-      <a class="tag" href="/dataset/?tags=Calidad+de+Aire">Calidad de Aire</a>
-    
-      <a class="tag" href="/dataset/?tags=Medio+ambiente">Medio ambiente</a>
-    
-      <a class="tag" href="/dataset/?tags=multifamiliares">multifamiliares</a>
-    
+<form class="d-flex py-3" method="get" action="/dataset/">
+  <div class="input-group mb-3">
+      <input id="field-main-search" class="form-control" type="search" placeholder="¿Qué datos estás buscando?" aria-label="Buscar conjuntos de datos" name="q" value="" autocomplete="off">
+      <button class="btn bg-green-light text-light" type="submit"><i class="fas fa-search"></i></button>
   </div>
-</div>
+</form>
+
 <!-- Snippet home/snippets/search.html end -->
 
         
+      </div>
+      <div class="col-md-4 col2">
         
           
 <!-- Snippet home/snippets/stats.html start -->
 
 
-<div class="box stats">
-  <div class="inner">
-    <h3>Portal de Datos Abiertos de la CDMX statistics</h3>
-    <ul>
-      
-      <li>
-        <a href="/dataset/">
-          <strong><span>193</span></strong>
-          datasets
-        </a>
-      </li>
-      <li>
-        <a href="/organization/">
-          <strong><span>31</span></strong>
-          organizations
-        </a>
-      </li>
-      <li>
-        <a href="/group/">
-          <strong><span>17</span></strong>
-          groups
-        </a>
-      </li>
-      
-    </ul>
+<a class="site_statistics" href="/dataset/">
+<div class="card shadow-sm my-3 mx-auto" style="width: 16rem;">
+  <div class="card-body text-capitalize">
+    <h3><strong><span>212</span></strong></h3>
+    conjuntos de datos
   </div>
 </div>
+</a>
+<a class="site_statistics" href="/organization/">
+<div class="card shadow-sm my-3 mx-auto" style="width: 16rem;">
+  <div class="card-body text-capitalize">
+    <h3><strong><span>31</span></strong></h3>
+    Dependencias
+  </div>
+</div>
+</a>
+<a class="site_statistics" href="/group/">
+<div class="card shadow-sm my-3 mx-auto" style="width: 16rem;">
+  <div class="card-body text-capitalize">
+    <h3><strong><span>17</span></strong></h3>
+    categorías
+  </div>
+</div>
+</a>
+
 <!-- Snippet home/snippets/stats.html end -->
-
-        
-      </div>
-      <div class="col-md-6 col2">
-        
-          
-<!-- Snippet home/snippets/promoted.html start -->
-
-
-<div class="module-content box">
-  <div>
-    
-      <p>El portal de Datos Abiertos de la CDMX te permite acceder, explorar, analizar, vizualizar y descargar bases de datos de organismos públicos de la CDMX</p>
-    
-  </div>
-
-  
-    <section class="featured media-overlay hidden-xs">
-      <h2 class="media-heading">This is a featured section</h2>
-      
-        <a class="media-image" href="#">
-          <img class="img-responsive" src="/base/images/placeholder-420x220.png" alt="Placeholder" width="420" height="220" />
-        </a>
-      
-    </section>
-  
-</div>
-<!-- Snippet home/snippets/promoted.html end -->
 
         
       </div>
     </div>
   </div>
 </div>
-<div role="main">
-  <div class="container">
-    <div class="row row2">
-      <div class="col-md-6 col2">
-        
-          
-<!-- Snippet home/snippets/featured_organization.html start -->
-
-
-
-  <div class="box">
-    
-<!-- Snippet snippets/organization_item.html start -->
-
-
-
-  <section class="group-list module module-narrow module-shallow">
-    
-      <header class="module-heading">
-        
-        <a class="module-image" href="/organization/agencia-digital-de-innovacion-publica">
-          <img src="https://datos-ckan.cdmx.gob.mx/uploads/group/2021-01-22-211431.784974Captura-de-Pantalla-2021-01-22-a-las-15.14.18.png" alt="agencia-digital-de-innovacion-publica" />
-        </a>
-        
-        
-          <h3 class="media-heading"><a href=/organization/agencia-digital-de-innovacion-publica>Agencia Digital de Innovación Pública (ADIP)</a></h3>
-        
-        
-          
-            
-              <p>La Agencia Digital de Innovación Pública (ADIP)...</p>
-            
-          
-        
-      </header>
-    
-    
-      
-      
-      
-<!-- Snippet snippets/package_list.html start -->
-
-
-  
-    <ul class="list-unstyled dataset-list">
-    	
-	      
-	        
-<!-- Snippet snippets/package_item.html start -->
-
-
-
-
-
-
-
-  <li class="dataset-item module-content">
-    
-      <div class="dataset-content">
-        
-          <h2 class="dataset-heading">
-            
-              
-            
-            
-		<a href="/dataset/domaindatasets">Catálogo de datos abiertos de la CDMX</a>
-            
-            
-              
-              
-            
-          </h2>
-        
-        
-          
-        
-        
-          
-            <div>Esta base de datos presenta un catálogo de los datos publicados por la Agencia Digital de Innov</div>
-          
-        
-      </div>
-      
-        
-      
-    
-  </li>
-
-<!-- Snippet snippets/package_item.html end -->
-
-	      
-	        
-<!-- Snippet snippets/package_item.html start -->
-
-
-
-
-
-
-
-  <li class="dataset-item module-content">
-    
-      <div class="dataset-content">
-        
-          <h2 class="dataset-heading">
-            
-              
-            
-            
-		<a href="/dataset/declaraciones-de-interes-ciudad-de-mexico">Declaraciones de interés Ciudad de México</a>
-            
-            
-              
-              
-            
-          </h2>
-        
-        
-          
-        
-        
-          
-            <div>En este&nbsp;conjunto de datos se&nbsp;presentan en formato de datos abiertos las declaraciones de intereses de las...</div>
-          
-        
-      </div>
-      
-        
-      
-    
-  </li>
-
-<!-- Snippet snippets/package_item.html end -->
-
-	      
-	    
-    </ul>
-  
-
-<!-- Snippet snippets/package_list.html end -->
-
-    
-  </section>
-
-<!-- Snippet snippets/organization_item.html end -->
-
+<div class="container mb-5">
+  <div class="alert alert-success" role="alert">
+    <h4 class="alert-heading">¡Atención!</h4>
+    <p>El Portal de Datos Abiertos está cambiando. En la ADIP estamos trabajando para ofrecerle a la Ciudad de México un portal que ayude a transitar a cualquier persona de dudas sobre la CDMX a respuestas basadas en datos. El nuevo portal tiene como objetivo ser un espacio que facilite la visualización y comprensión de la información para todas las personas.</p>
+    <hr>
+    <p class="mb-0"><a href="https://paginas.datos.cdmx.gob.mx/plan-accion#carta" target="_blank">Leer más</a></p>
   </div>
-
-<!-- Snippet home/snippets/featured_organization.html end -->
-
+</div>
+<div class="container">
+  <div class="card shadow-sm my-3 p-2 text-center">
+    <a href="https://paginas.datos.cdmx.gob.mx/transparencia-covid" target="_blank">
+      <img src="/base/assets/img/Captura de pantalla de 2020-12-16 23-07-41.png" class="card-img" alt="Banner">
+    </a>
+  </div>
+</div>
+<div class="container my-5">
+  <div class="card shadow-sm">
+    <div class="card-header bg-green text-light text-center">
+      <h2 class="py-3"><strong>Consulta conjunto de datos por categoría</strong></h2>
+    </div>
+    <div class="card-body p-5">
+      <div class="row">
         
-      </div>
-      <div class="col-md-6 col1">
         
           
 <!-- Snippet home/snippets/featured_group.html start -->
 
 
 
-  <div class="box">
     
 <!-- Snippet snippets/group_item.html start -->
 
-  <section class="group-list module module-narrow module-shallow">
-    
-      <header class="module-heading">
-        
-        
-        
-        
-          <a class="module-image" href="/group/administracion-y-finanzas">
-            <img src="https://datos-ckan.cdmx.gob.mx/uploads/group/2021-01-23-020415.688610finanzas.svg" alt="administracion-y-finanzas" />
+  <div class="col-sm-4">
+    <div class="card mb-3 border-0" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          
+          <a class="" href="/group/administracion-y-finanzas"></a>
+            <img src="https://datos.cdmx.gob.mx/uploads/group/2021-01-23-020415.688610finanzas.svg" alt="administracion-y-finanzas" height="60">
           </a>
-        
-        
-          <h3 class="media-heading"><a href="/group/administracion-y-finanzas">Administración y Finanzas</a></h3>
-        
-        
           
-        
-      </header>
-    
-    
-      
-      
-      
-<!-- Snippet snippets/package_list.html start -->
-
-
-  
-    <ul class="list-unstyled dataset-list">
-    	
-	      
-	        
-<!-- Snippet snippets/package_item.html start -->
-
-
-
-
-
-
-
-  <li class="dataset-item module-content">
-    
-      <div class="dataset-content">
-        
-          <h2 class="dataset-heading">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            
+            <h5 class="card-title"><a class="text-green" href="/group/administracion-y-finanzas">Administración y Finanzas</a></h5>
+            
+            <p class="card-text"></p>
             
               
-            
-            
-		<a href="/dataset/recursos-de-la-ciudad-transferidos-a-las-alcaldias">Recursos de la Ciudad transferidos a las Alcaldías</a>
-            
-            
-              
+              <strong class="card-text"><small class="text-muted">16 Conjuntos de Datos</small></strong>
               
             
-          </h2>
-        
-        
-          
-        
-        
-          
-            <div>Presupuesto que el Gobierno de la Ciudad asigna a las Alcaldías.
-Aquí podrás saber en qué y para qué gastan las...</div>
-          
-        
+          </div>
+        </div>
       </div>
-      
-        
-      
-    
-  </li>
-
-<!-- Snippet snippets/package_item.html end -->
-
-	      
-	        
-<!-- Snippet snippets/package_item.html start -->
-
-
-
-
-
-
-
-  <li class="dataset-item module-content">
-    
-      <div class="dataset-content">
-        
-          <h2 class="dataset-heading">
-            
-              
-            
-            
-		<a href="/dataset/contratos-adjudicados-covid19">Contratos adjudicados por COVID-19</a>
-            
-            
-              
-              
-            
-          </h2>
-        
-        
-          
-        
-        
-          
-            <div>&nbsp;
-
-
-&nbsp;
-&nbsp;
-&nbsp;
-
-&nbsp;
-&nbsp;
-&nbsp;&nbsp;
-
-
-
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;
-&nbsp;...</div>
-          
-        
-      </div>
-      
-        
-      
-    
-  </li>
-
-<!-- Snippet snippets/package_item.html end -->
-
-	      
-	    
-    </ul>
+    </div>
+  </div>
   
-
-<!-- Snippet snippets/package_list.html end -->
-
-    
-  </section>
 
 <!-- Snippet snippets/group_item.html end -->
 
+
+    
+<!-- Snippet snippets/group_item.html start -->
+
+  <div class="col-sm-4">
+    <div class="card mb-3 border-0" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          
+          <a class="" href="/group/conectividad"></a>
+            <img src="https://datos.cdmx.gob.mx/uploads/group/2021-01-23-001926.662697Conectividad.svg" alt="conectividad" height="60">
+          </a>
+          
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            
+            <h5 class="card-title"><a class="text-green" href="/group/conectividad">Conectividad</a></h5>
+            
+            <p class="card-text"></p>
+            
+              
+              <strong class="card-text"><small class="text-muted">8 Conjuntos de Datos</small></strong>
+              
+            
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
+  
+
+<!-- Snippet snippets/group_item.html end -->
+
+
+    
+<!-- Snippet snippets/group_item.html start -->
+
+  <div class="col-sm-4">
+    <div class="card mb-3 border-0" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          
+          <a class="" href="/group/covid-19"></a>
+            <img src="https://datos.cdmx.gob.mx/uploads/group/2021-01-23-002649.128573covid.svg" alt="covid-19" height="60">
+          </a>
+          
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            
+            <h5 class="card-title"><a class="text-green" href="/group/covid-19">Covid-19</a></h5>
+            
+            <p class="card-text"></p>
+            
+              
+              <strong class="card-text"><small class="text-muted">24 Conjuntos de Datos</small></strong>
+              
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Snippet snippets/group_item.html end -->
+
+
+    
+<!-- Snippet snippets/group_item.html start -->
+
+  <div class="col-sm-4">
+    <div class="card mb-3 border-0" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          
+          <a class="" href="/group/cultura"></a>
+            <img src="https://datos.cdmx.gob.mx/uploads/group/2021-01-23-002313.344891CULTURA.svg" alt="cultura" height="60">
+          </a>
+          
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            
+            <h5 class="card-title"><a class="text-green" href="/group/cultura">Cultura</a></h5>
+            
+            <p class="card-text"></p>
+            
+              
+              <strong class="card-text"><small class="text-muted">3 Conjuntos de Datos</small></strong>
+              
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Snippet snippets/group_item.html end -->
+
+
+    
+<!-- Snippet snippets/group_item.html start -->
+
+  <div class="col-sm-4">
+    <div class="card mb-3 border-0" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          
+          <a class="" href="/group/desarrollo-urbano-vivienda-y-territorio"></a>
+            <img src="https://datos.cdmx.gob.mx/uploads/group/2021-01-23-002005.180582desarrollo-urbano.svg" alt="desarrollo-urbano-vivienda-y-territorio" height="60">
+          </a>
+          
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            
+            <h5 class="card-title"><a class="text-green" href="/group/desarrollo-urbano-vivienda-y-territorio">Desarrollo Urbano, Vivienda y Territorio</a></h5>
+            
+            <p class="card-text"></p>
+            
+              
+              <strong class="card-text"><small class="text-muted">33 Conjuntos de Datos</small></strong>
+              
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Snippet snippets/group_item.html end -->
+
+
+    
+<!-- Snippet snippets/group_item.html start -->
+
+  <div class="col-sm-4">
+    <div class="card mb-3 border-0" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          
+          <a class="" href="/group/division-geografica"></a>
+            <img src="https://datos.cdmx.gob.mx/uploads/group/2021-08-23-175433.018960geo.svg" alt="division-geografica" height="60">
+          </a>
+          
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            
+            <h5 class="card-title"><a class="text-green" href="/group/division-geografica">División Geográfica</a></h5>
+            
+            <p class="card-text"></p>
+            
+              
+              <strong class="card-text"><small class="text-muted">6 Conjuntos de Datos</small></strong>
+              
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Snippet snippets/group_item.html end -->
+
+
+    
+<!-- Snippet snippets/group_item.html start -->
+
+  <div class="col-sm-4">
+    <div class="card mb-3 border-0" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          
+          <a class="" href="/group/educacion-ciencia-y-tecnologia"></a>
+            <img src="https://datos.cdmx.gob.mx/uploads/group/2021-01-23-002731.972771educacionciencia-y-tecnologia.svg" alt="educacion-ciencia-y-tecnologia" height="60">
+          </a>
+          
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            
+            <h5 class="card-title"><a class="text-green" href="/group/educacion-ciencia-y-tecnologia">Educación, Ciencia y Tecnología</a></h5>
+            
+            <p class="card-text"></p>
+            
+              
+              <strong class="card-text"><small class="text-muted">4 Conjuntos de Datos</small></strong>
+              
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Snippet snippets/group_item.html end -->
+
+
+    
+<!-- Snippet snippets/group_item.html start -->
+
+  <div class="col-sm-4">
+    <div class="card mb-3 border-0" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          
+          <a class="" href="/group/inclusion-y-bienestar-social"></a>
+            <img src="https://datos.cdmx.gob.mx/uploads/group/2021-01-23-002401.614967inclusion-social.svg" alt="inclusion-y-bienestar-social" height="60">
+          </a>
+          
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            
+            <h5 class="card-title"><a class="text-green" href="/group/inclusion-y-bienestar-social">Inclusión y Bienestar Social</a></h5>
+            
+            <p class="card-text"></p>
+            
+              
+              <strong class="card-text"><small class="text-muted">25 Conjuntos de Datos</small></strong>
+              
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Snippet snippets/group_item.html end -->
+
+
+    
+<!-- Snippet snippets/group_item.html start -->
+
+  <div class="col-sm-4">
+    <div class="card mb-3 border-0" style="max-width: 540px;">
+      <div class="row g-0">
+        <div class="col-md-4">
+          
+          <a class="" href="/group/infraestructura-y-obra-publica"></a>
+            <img src="https://datos.cdmx.gob.mx/uploads/group/2021-01-23-002421.931527infrestructuraobrapublica.svg" alt="infraestructura-y-obra-publica" height="60">
+          </a>
+          
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            
+            <h5 class="card-title"><a class="text-green" href="/group/infraestructura-y-obra-publica">Infraestructura y Obra Pública</a></h5>
+            
+            <p class="card-text"></p>
+            
+              
+              <strong class="card-text"><small class="text-muted">3 Conjuntos de Datos</small></strong>
+              
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+
+<!-- Snippet snippets/group_item.html end -->
+
 
 <!-- Snippet home/snippets/featured_group.html end -->
 
         
       </div>
     </div>
+    <div class="card-footer bg-white text-center py-3">
+      <a href="/group/" class="text-green-light"><u>Ver todas las categorías</u></a>
+    </div>
   </div>
 </div>
+
 <!-- Snippet home/layout2.html end -->
 
     
   </div>
 
-    <footer class="site-footer">
+    <footer class="ods-front-footer ng-scope  text-light pt-4">
   <div class="container">
     
-    <div class="row">
-      <div class="col-md-8 footer-links">
-        
-          <ul class="list-unstyled">
-            
-              <li><a href="/about">About Portal de Datos Abiertos de la CDMX</a></li>
-            
-          </ul>
-          <ul class="list-unstyled">
-            
-              
-              <li><a href="http://docs.ckan.org/en/2.9/api/">CKAN API</a></li>
-              <li><a href="http://www.ckan.org/">CKAN Association</a></li>
-              <li><a href="http://www.opendefinition.org/okd/"><img src="/base/images/od_80x15_blue.png" alt="Open Data"></a></li>
-            
-          </ul>
-        
+    <div class="row pb-5">
+      <div class="col-md-3">
+        <a href="#" target="_blank">
+        <img src="/base/assets/img/logo-footer.svg" class="footer-image" alt="ADIP">
+        </a>
       </div>
-      <div class="col-md-4 attribution">
-        
-          <p><strong>Powered by</strong> <a class="hide-text ckan-footer-logo" href="http://ckan.org">CKAN</a></p>
-        
-        
+      <div class="col-md-3">
+        <h6 class="footer-title">
+          Sobre el portal
+        </h6>
+        <ul class="footer-links">
+          <li>
+            <a class="link-light" href="https://paginas.datos.cdmx.gob.mx/plan-apertura" target="_blank">
+              Plan de apertura
+            </a>
+          </li>
+          <li>
+            <a class="link-light" href="https://paginas.datos.cdmx.gob.mx" target="_blank">
+              Plan de acción
+            </a>
+          </li>
           
-<!-- Snippet snippets/language_selector.html start -->
-
-<form class="form-inline form-select lang-select" action="/util/redirect" data-module="select-switch" method="POST">
-  <label for="field-lang-select">Language</label>
-  <select id="field-lang-select" name="url" data-module="autocomplete" data-module-dropdown-class="lang-dropdown" data-module-container-class="lang-container">
-    
-      <option value="/en/" selected="selected">
-        English
-      </option>
-    
-      <option value="/pt_BR/" >
-        português (Brasil)
-      </option>
-    
-      <option value="/ja/" >
-        日本語
-      </option>
-    
-      <option value="/it/" >
-        italiano
-      </option>
-    
-      <option value="/cs_CZ/" >
-        čeština (Česko)
-      </option>
-    
-      <option value="/ca/" >
-        català
-      </option>
-    
-      <option value="/es/" >
-        español
-      </option>
-    
-      <option value="/fr/" >
-        français
-      </option>
-    
-      <option value="/el/" >
-        Ελληνικά
-      </option>
-    
-      <option value="/sv/" >
-        svenska
-      </option>
-    
-      <option value="/sr/" >
-        српски
-      </option>
-    
-      <option value="/no/" >
-        norsk bokmål (Norge)
-      </option>
-    
-      <option value="/sk/" >
-        slovenčina
-      </option>
-    
-      <option value="/fi/" >
-        suomi
-      </option>
-    
-      <option value="/ru/" >
-        русский
-      </option>
-    
-      <option value="/de/" >
-        Deutsch
-      </option>
-    
-      <option value="/pl/" >
-        polski
-      </option>
-    
-      <option value="/nl/" >
-        Nederlands
-      </option>
-    
-      <option value="/bg/" >
-        български
-      </option>
-    
-      <option value="/ko_KR/" >
-        한국어 (대한민국)
-      </option>
-    
-      <option value="/hu/" >
-        magyar
-      </option>
-    
-      <option value="/sl/" >
-        slovenščina
-      </option>
-    
-      <option value="/lv/" >
-        latviešu
-      </option>
-    
-      <option value="/am/" >
-        አማርኛ
-      </option>
-    
-      <option value="/ar/" >
-        العربية
-      </option>
-    
-      <option value="/da_DK/" >
-        dansk (Danmark)
-      </option>
-    
-      <option value="/en_AU/" >
-        English (Australia)
-      </option>
-    
-      <option value="/es_AR/" >
-        español (Argentina)
-      </option>
-    
-      <option value="/eu/" >
-        euskara
-      </option>
-    
-      <option value="/fa_IR/" >
-        فارسی (ایران)
-      </option>
-    
-      <option value="/gl/" >
-        galego
-      </option>
-    
-      <option value="/he/" >
-        עברית
-      </option>
-    
-      <option value="/hr/" >
-        hrvatski
-      </option>
-    
-      <option value="/id/" >
-        Indonesia
-      </option>
-    
-      <option value="/is/" >
-        íslenska
-      </option>
-    
-      <option value="/km/" >
-        ខ្មែរ
-      </option>
-    
-      <option value="/lt/" >
-        lietuvių
-      </option>
-    
-      <option value="/mk/" >
-        македонски
-      </option>
-    
-      <option value="/mn_MN/" >
-        монгол (Монгол)
-      </option>
-    
-      <option value="/ne/" >
-        नेपाली
-      </option>
-    
-      <option value="/pt_PT/" >
-        português (Portugal)
-      </option>
-    
-      <option value="/ro/" >
-        română
-      </option>
-    
-      <option value="/sq/" >
-        shqip
-      </option>
-    
-      <option value="/sr_Latn/" >
-        srpski (latinica)
-      </option>
-    
-      <option value="/th/" >
-        ไทย
-      </option>
-    
-      <option value="/tl/" >
-        Filipino (Pilipinas)
-      </option>
-    
-      <option value="/tr/" >
-        Türkçe
-      </option>
-    
-      <option value="/uk/" >
-        українська
-      </option>
-    
-      <option value="/uk_UA/" >
-        українська (Україна)
-      </option>
-    
-      <option value="/vi/" >
-        Tiếng Việt
-      </option>
-    
-      <option value="/zh_CN/" >
-        中文 (简体, 中国)
-      </option>
-    
-      <option value="/zh_TW/" >
-        中文 (繁體, 台灣)
-      </option>
-    
-  </select>
-  <button class="btn btn-default js-hide" type="submit">Go</button>
-</form>
-<!-- Snippet snippets/language_selector.html end -->
-
-        
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="footer-title">
+          Accesos
+        </h6>
+        <ul class="footer-links px-0">
+          <li>
+            <a class="link-light" href="/dataset/">
+              Conjuntos de datos
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-3">
+        <h6 class="footer-title">
+          Atención ciudadana
+        </h6>
+        <ul class="footer-links px-0">
+          
+          <li>
+            <p class="link-light">
+              <i class="fas fa-phone-alt"></i> <a class="link-light" href="tel:5530900500">55 3090 0500</a> ó <a class="link-light" href="tel:5554475100">55 5447 5100</a>
+            </p>
+          </li>
+        </ul>
       </div>
     </div>
+    <hr>
+    <nav class="navbar navbar-expand-lg py-0">
+      <div class="container">
+        <div class="collapse navbar-collapse w-100 justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            
+            <li class="nav-item">
+              <a class="nav-link link-light" href="https://ckan.org/" target="blank">CKAN</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
     
   </div>
-
   
     
   
 </footer>
+
   
   
   
@@ -798,12 +607,21 @@ Aquí podrás saber en qué y para qué gastan las...</div>
     
     
     <link href="/webassets/vendor/f3b8236b_select2.css" rel="stylesheet"/>
-<link href="/webassets/vendor/0b01aef1_font-awesome.css" rel="stylesheet"/>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
     <script src="/webassets/vendor/d8ae4bed_jquery.js" type="text/javascript"></script>
 <script src="/webassets/vendor/ab26884f_vendor.js" type="text/javascript"></script>
-<script src="/webassets/vendor/580fa18d_bootstrap.js" type="text/javascript"></script>
 <script src="/webassets/base/5f5a82bb_main.js" type="text/javascript"></script>
-<script src="/webassets/base/b836e8ea_ckan.js" type="text/javascript"></script>
-  <script async type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=14&cb=1671436526"></script>
+<script src="/webassets/base/b8576d9c_ckan.js" type="text/javascript"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V48LN1YY78"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-V48LN1YY78');
+    </script>
+  <script async type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=14&cb=2119472713"></script>
 </body>
 </html>
