@@ -62,7 +62,7 @@
 <nav class="navbar navbar-light bg-light">
   <div class="container">
     <a class="navbar-brand" href="/">
-      <img src="/uploads/admin/2020-12-29-022442.796953logo.svg" alt="Portal de Datos Abiertos de la CDMX" title="Portal de Datos Abiertos de la CDMX" height="50">
+      <img src="/uploads/admin/2022-01-13-231644.947541logo-cdmx-datos.svg" alt="Portal de Datos Abiertos de la CDMX" title="Portal de Datos Abiertos de la CDMX" height="50">
     </a>
   </div>
 </nav>
@@ -74,8 +74,8 @@
     <div class="navbar-nav">
       <a class="nav-item nav-link mx-2" aria-current="page" href="/">Inicio</a>
       <a class="nav-item nav-link mx-2" href="/dataset/">Conjuntos de datos</a>
-      <a class="nav-item nav-link mx-2" href="https://paginas.datos.cdmx.gob.mx/plan-apertura" target="_blank">Plan de apertura</a>
-      <a class="nav-item nav-link mx-2" href="https://paginas.datos.cdmx.gob.mx" target="_blank">Plan de acción</a>
+      
+      
       
     </div>
   </div>
@@ -171,17 +171,10 @@
     </div>
   </div>
 </div>
-<div class="container mb-5">
-  <div class="alert alert-success" role="alert">
-    <h4 class="alert-heading">¡Atención!</h4>
-    <p>El Portal de Datos Abiertos está cambiando. En la ADIP estamos trabajando para ofrecerle a la Ciudad de México un portal que ayude a transitar a cualquier persona de dudas sobre la CDMX a respuestas basadas en datos. El nuevo portal tiene como objetivo ser un espacio que facilite la visualización y comprensión de la información para todas las personas.</p>
-    <hr>
-    <p class="mb-0"><a href="https://paginas.datos.cdmx.gob.mx/plan-accion#carta" target="_blank">Leer más</a></p>
-  </div>
-</div>
+
 <div class="container">
   <div class="card shadow-sm my-3 p-2 text-center">
-    <a href="https://paginas.datos.cdmx.gob.mx/transparencia-covid" target="_blank">
+    <a href="https://datos.cdmx.gob.mx/group/covid-19">
       <img src="/base/assets/img/Captura de pantalla de 2020-12-16 23-07-41.png" class="card-img" alt="Banner">
     </a>
   </div>
@@ -536,16 +529,8 @@
           Sobre el portal
         </h6>
         <ul class="footer-links">
-          <li>
-            <a class="link-light" href="https://paginas.datos.cdmx.gob.mx/plan-apertura" target="_blank">
-              Plan de apertura
-            </a>
-          </li>
-          <li>
-            <a class="link-light" href="https://paginas.datos.cdmx.gob.mx" target="_blank">
-              Plan de acción
-            </a>
-          </li>
+          
+          
           
         </ul>
       </div>
@@ -622,6 +607,6 @@
 
       gtag('config', 'G-V48LN1YY78');
     </script>
-  <script async type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=5&cb=917324049"></script>
+  <script async type="text/javascript" src="/_Incapsula_Resource?SWJIYLWA=719d34d31c8e3a6e6fffd425f7e032f3&ns=5&cb=1702825300"></script>
 </body>
 </html>
