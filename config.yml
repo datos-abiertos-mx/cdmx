@@ -1,27 +1,25 @@
 sites:
     adip:
         name: ADIP
-        url: https://datos.cdmx.gob.mx/explore/dataset/{dataset}/download/?format={format}&timezone={timezone}&lang={lang}&use_labels_for_header=true&csv_separator=%2C
+        url: https://datos.cdmx.gob.mx/datastore/dump/{dataset}?format={format}&bom=True
         params:
             format: csv
-            timezone: America/Mexico_City
-            lang: es
         datasets:
-            - "fotocivicas"
-            - "diagnostico-sobre-la-ciudad-en-el-mundo"
-            - "incidentes-viales-c5"
-            - "mapa_ingresos_parquimetros"
-            - "contador-ciclistas"
-            - "carpetas-de-investigacion-pgj-de-la-ciudad-de-mexico"
-            - "victimas-en-carpetas-de-investigacion-pgj"
-            - "prueba-parquimetros"
-            - "hechos-de-transito-reportados-por-ssc-base-comparativa"
-            - "hechos-de-transito-registrados-por-la-ssc-serie-para-comparaciones-interanuales-"
-            - "gtfs-general-transit-feed-specifications-actualizado-de-la-ciudad-de-mexico"
-            - "vialidades-de-la-ciudad-de-mexico"
-            - "ciclovias"
-            - "estaciones-de-ecobici"
-            - "base-covid-sinave"
+            - "04641e2e-8eaa-4637-9f9c-388fc6e683b1" # "fotocivicas"
+#             - "diagnostico-sobre-la-ciudad-en-el-mundo"
+#             - "incidentes-viales-c5"
+#             - "mapa_ingresos_parquimetros"
+#             - "contador-ciclistas"
+#             - "carpetas-de-investigacion-pgj-de-la-ciudad-de-mexico"
+#             - "victimas-en-carpetas-de-investigacion-pgj"
+#             - "prueba-parquimetros"
+#             - "hechos-de-transito-reportados-por-ssc-base-comparativa"
+#             - "hechos-de-transito-registrados-por-la-ssc-serie-para-comparaciones-interanuales-"
+#             - "gtfs-general-transit-feed-specifications-actualizado-de-la-ciudad-de-mexico"
+#             - "vialidades-de-la-ciudad-de-mexico"
+#             - "ciclovias"
+#             - "estaciones-de-ecobici"
+#             - "base-covid-sinave"
     cre:
         name: gasolineras
         url: https://publicacionexterna.azurewebsites.net/publicaciones/{dataset}
